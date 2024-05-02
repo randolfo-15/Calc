@@ -38,17 +38,19 @@ public class MainActivity extends AppCompatActivity {
 
     void operate(String sb){
         //String values="";
-
+        if(!flag_opt) return;
         out.setText(values(sb));
         vls.add(sb);
         vls.add("");
         i+=2;
+        flag_opt=false;
     }
 
     void clr(String value){
         vls.clear();
         vls.add(value);
         flag_ptr=true;
+        flag_opt=true;
         i=0;
         out.setText(value);
     }
@@ -81,7 +83,10 @@ public class MainActivity extends AppCompatActivity {
         changer_number(".");
         flag_ptr=false;
     }
-    void number(String n){ changer_number(n);}
+    void number(String n){
+        changer_number(n);
+        flag_opt=true;
+    }
 
     // Manager:
     public void manager(View v){
