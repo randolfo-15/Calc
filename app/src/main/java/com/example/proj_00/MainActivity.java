@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         out=findViewById(R.id.out);
+
         vls.add("");
     }
 
@@ -37,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void operate(String sb){
-        //String values="";
         if(!flag_opt) return;
         out.setText(values(sb));
         vls.add(sb);
@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         vls.add(value);
         flag_ptr=true;
         flag_opt=true;
+
         i=0;
         out.setText(value);
     }

@@ -76,6 +76,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_red_light"
                 android:onClick="manager"
                 android:text="@string/divs"
                 android:textSize="34sp" />
@@ -122,6 +123,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_red_light"
                 android:onClick="manager"
                 android:text="@string/mult"
                 android:textSize="34sp" />
@@ -168,6 +170,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_red_light"
                 android:onClick="manager"
                 android:text="@string/subt"
                 android:textSize="34sp" />
@@ -192,15 +195,6 @@
                 android:textSize="34sp" />
 
             <Button
-                android:id="@+id/btn_clr"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="manager"
-                android:text="C"
-                android:textSize="34sp" />
-
-            <Button
                 android:id="@+id/btn_ptr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -210,10 +204,21 @@
                 android:textSize="34sp" />
 
             <Button
+                android:id="@+id/btn_clr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_purple"
+                android:onClick="manager"
+                android:text="C"
+                android:textSize="34sp" />
+
+            <Button
                 android:id="@+id/btn_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_red_light"
                 android:onClick="manager"
                 android:text="@string/soma"
                 android:textSize="34sp" />
@@ -234,6 +239,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_green_light"
                 android:onClick="manager"
                 android:text="@string/result"
                 android:textSize="34sp" />
