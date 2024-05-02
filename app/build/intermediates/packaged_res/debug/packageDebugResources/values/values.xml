@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="gray">#FF999999</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Proj_00</string>
+    <string name="divs">÷</string>
+    <string name="mult">×</string>
+    <string name="ptn">.</string>
+    <string name="result">=</string>
+    <string name="soma">+</string>
+    <string name="subt">-</string>
+    <string name="title"> Basic Calc</string>
+    <style name="Base.Theme.Proj_00" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.Proj_00" parent="Base.Theme.Proj_00"/>
+</resources>

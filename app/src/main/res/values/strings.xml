@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Proj_00</string>
+    <string name="title"> Basic Calc</string>
+    <string name="soma">+</string>
+    <string name="subt">-</string>
+    <string name="mult">×</string>
+    <string name="divs">÷</string>
+    <string name="ptn">.</string>
+    <string name="result">=</string>
+
+</resources>

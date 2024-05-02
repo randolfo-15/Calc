@@ -1,0 +1,6 @@
+com.example.proj_00.test.app-core-1.5.0-0 /home/randolfo/.gradle/caches/transforms-3/51ed653df3cbde9a5a5069d6c8eca3e4/transformed/core-1.5.0/res
+com.example.proj_00.test.app-annotation-experimental-1.3.0-1 /home/randolfo/.gradle/caches/transforms-3/fb3a0ee8a6f722e47648d199adf90677/transformed/annotation-experimental-1.3.0/res
+com.example.proj_00.test.app-androidTest-2 /home/randolfo/AndroidStudioProjects/CFB_cursos/Proj_00/app/build/generated/res/resValues/androidTest/debug
+com.example.proj_00.test.app-mergeDebugAndroidTestResources-3 /home/randolfo/AndroidStudioProjects/CFB_cursos/Proj_00/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.example.proj_00.test.app-mergeDebugAndroidTestResources-4 /home/randolfo/AndroidStudioProjects/CFB_cursos/Proj_00/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.example.proj_00.test.app-debugAndroidTest-5 /home/randolfo/AndroidStudioProjects/CFB_cursos/Proj_00/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources
