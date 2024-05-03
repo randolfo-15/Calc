@@ -1,4 +1,4 @@
-#Fri May 03 00:06:13 BRT 2024
+#Fri May 03 11:11:55 BRT 2024
 base.0=/home/randolfo/AndroidStudioProjects/CFB_cursos/Proj_00/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/home/randolfo/AndroidStudioProjects/CFB_cursos/Proj_00/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.2=/home/randolfo/AndroidStudioProjects/CFB_cursos/Proj_00/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex

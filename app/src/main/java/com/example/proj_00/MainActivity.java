@@ -4,8 +4,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.LinkedList;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -31,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Operations:
     String values(String end){
-        cnt="";
+        cnt=" ";
         vls.forEach(vl -> cnt+=vl);
         return cnt+end;
     }
@@ -57,15 +63,31 @@ public class MainActivity extends AppCompatActivity {
 
     float parse(String value){ return (value.equals("")? 0 : Float.parseFloat(value)); }
 
+    double div(double a ,double b) throws Exception{
+        if(b==0) throw new Exception();
+        BigDecimal bg = new BigDecimal(a/b).setScale(5, RoundingMode.HALF_EVEN);
+        return bg.doubleValue();
+    }
+
     void calc(int size){
-        float value = Float.parseFloat(vls.getFirst());
+        if(vls.getLast().equals("")) return;
+        double value = Double.parseDouble(vls.getFirst());
         for(int i=1;i<size;i++){
             if(i%2==0){
                 switch (vls.get(i-1)){
                     case "+": { value+=parse(vls.get(i)); } break;
                     case "-": { value-=parse(vls.get(i)); } break;
                     case "×": { value*=parse(vls.get(i)); } break;
-                    case "÷": { value/=parse(vls.get(i)); } break;
+                    case "÷": {
+                        try {
+                            value = div(value, parse(vls.get(i)));
+                        }catch (Exception e){
+                            if      (value>0) clr(values("= ∞"));
+                            else if (value<0) clr(values("= -∞"));
+                            else              clr(values("= NaN"));
+                            return;
+                        }
+                    } break;
                 }
             }
         }
@@ -83,9 +105,11 @@ public class MainActivity extends AppCompatActivity {
         changer_number(".");
         flag_ptr=false;
     }
+
     void number(String n){
         changer_number(n);
         flag_opt=true;
+
     }
 
     // Manager:
@@ -97,8 +121,11 @@ public class MainActivity extends AppCompatActivity {
         else if (v.getId()==R.id.btn_mtl) operate("×");
         else if (v.getId()==R.id.btn_div) operate("÷");
         else if (v.getId()==R.id.btn_clr) clr("0");
-        else if (v.getId()==R.id.btn_rlt) calc(vls.size());
-        else if (v.getId()==R.id.btn_ptr) pnt();
+        else if (v.getId()==R.id.btn_rlt){
+          try { calc(vls.size());}
+          catch (Exception e){ clr(" : ("); }
+
+        } else if (v.getId()==R.id.btn_ptr) pnt();
         else    number(btn.getText().toString());
     }
 }
