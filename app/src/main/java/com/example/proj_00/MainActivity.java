@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView out = null ;
     private Boolean
             flag_ptr=true,
-            flag_opt=true;
+            flag_opt=false;
 
     private LinkedList<String> vls = new LinkedList<>();
     private String cnt="";
@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         out=findViewById(R.id.out);
-
         vls.add("");
     }
 
@@ -48,12 +47,12 @@ public class MainActivity extends AppCompatActivity {
 
     void clr(String value){
         vls.clear();
-        vls.add(value);
+        vls.add("");
         flag_ptr=true;
-        flag_opt=true;
-
+        flag_opt=false;
         i=0;
-        out.setText(value);
+        out.setHint(value);
+        out.setText("");
     }
 
     float parse(String value){ return (value.equals("")? 0 : Float.parseFloat(value)); }
@@ -70,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-        clr(""+value);
+        clr(values("=")+value);
     }
 
     // Numbers:
@@ -94,10 +93,10 @@ public class MainActivity extends AppCompatActivity {
         Button btn = findViewById(v.getId());
 
         if      (v.getId()==R.id.btn_add) operate("+");
-        else if (v.getId()==R.id.btn_sub) operate("-");
+        else if (v.getId()==R.id.btn_sub) if(flag_opt) operate("-"); else number("-");
         else if (v.getId()==R.id.btn_mtl) operate("×");
         else if (v.getId()==R.id.btn_div) operate("÷");
-        else if (v.getId()==R.id.btn_clr) clr("");
+        else if (v.getId()==R.id.btn_clr) clr("0");
         else if (v.getId()==R.id.btn_rlt) calc(vls.size());
         else if (v.getId()==R.id.btn_ptr) pnt();
         else    number(btn.getText().toString());
